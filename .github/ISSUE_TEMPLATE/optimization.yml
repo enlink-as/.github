@@ -1,0 +1,61 @@
+name: "Optimization"
+description: "Propose an optimization, improvement, or technical debt reduction."
+title: "Title"
+labels: []
+type: "Optimization"
+assignees: []
+projects: ["enlink-as/28"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "📌 Description"
+      description: "Briefly describe the optimization and why it is needed. Highlight performance, scalability, efficiency, or maintainability improvements."
+      placeholder: "Explain the optimization idea..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope_of_work
+    attributes:
+      label: "🛠 Scope of Work"
+      description: "List the specific actions required to implement this optimization. Focus on the general approach without prescribing technical solutions."
+      placeholder: "1. Refactor module X...\n2. Improve caching for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: "✅ Expected Outcome"
+      description: "Define the deliverable(s) and how this optimization improves the system. Specify measurable improvements if possible (e.g., reduced response time, lower resource usage)."
+      placeholder: "The optimization should lead to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "🔗 Dependencies"
+      description: "Mention any dependencies on other tasks, services, or teams."
+      placeholder: "Depends on feature X, team Y review..."
+      
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "📝 Additional Context"
+      description: "Include relevant links, benchmarks, or performance metrics."
+      placeholder: "Attach documentation, benchmarks, or relevant discussions..."
+      
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: "✅ Definition of Done"
+      description: "The optimization is considered complete when these criteria are met."
+      options:
+        - label: "The optimization is implemented and committed"
+        - label: "The changes are reviewed and approved"
+        - label: "Automated and/or manual tests confirm expected outcome"
+        - label: "No regressions are introduced"
+        - label: "Relevant documentation is updated (if needed)"

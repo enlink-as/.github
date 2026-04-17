@@ -1,0 +1,46 @@
+name: "Feature"
+description: "Propose a new feature"
+title: "Title"
+labels: []
+type: "Feature"
+assignees: []
+projects: ["enlink-as/28"]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "📌 Description"
+      description: "Provide a brief and clear description of the feature. Explain why this feature is needed and what problem it solves."
+      placeholder: "Describe the feature and its purpose here..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: "🎯 Expected Outcome"
+      description: "Define the expected deliverable(s) and the impact on the system. Specify what success looks like."
+      placeholder: "The system should..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies_considerations
+    attributes:
+      label: "🔗 Dependencies & Considerations"
+      description: "List any dependencies on other services or features. Highlight any risks or considerations for implementation."
+      placeholder: |
+        - Depends on: ...
+        - Consideration: ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "📎 Additional Context"
+      description: "Include relevant links, references, or screenshots if applicable."
+      placeholder: "Attach relevant documents, links, or references..."
+    validations:
+      required: false

@@ -1,0 +1,90 @@
+name: "Bug"
+description: "Report an issue or unexpected behavior."
+title: "Title"
+labels: []
+type: "Bug"
+projects: ["enlink-as/28"]
+assignees: []
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "📌 Description"
+      description: "Clearly describe the bug and its impact. Include expected behavior vs. actual behavior."
+      placeholder: "Explain the issue here..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: "🔄 Steps to Reproduce"
+      description: "Provide step-by-step instructions to replicate the issue."
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Observe the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "✅ Expected Behavior"
+      description: "Describe what should happen."
+      placeholder: "The application should..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: "🚨 Actual Behavior"
+      description: "Describe what is actually happening."
+      placeholder: "Instead, the application does..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: "🖥 Environment"
+      description: "Specify relevant environment details to help debugging."
+      placeholder: |
+        - **Service or Component**: (e.g., enlink-optimizer, enlink-frontend)
+        - **Version**: (if applicable)
+        - **Browser/OS**: (for frontend bugs)
+        - **Logs/Stack Trace**: (if available)
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "🚦 Severity"
+      description: "Select the severity level that best describes the issue."
+      options:
+        - 🟥 Critical – System failure or major feature broken
+        - 🟧 High – Significant impact but not a full failure
+        - 🟨 Medium – Functional but with noticeable issues
+        - 🟦 Low – Minor bug or cosmetic issue
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "📝 Additional Context"
+      description: "Include screenshots, links, or related issues if applicable."
+      placeholder: "Attach logs, images, or related tickets..."
+      
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: "✅ Definition of Done"
+      description: "The bug is considered resolved when these criteria are met."
+      options:
+        - label: "The issue is fixed and committed"
+        - label: "The fix is reviewed and approved"
+        - label: "Automated and/or manual tests confirm resolution"
+        - label: "No regressions are introduced"
+        - label: "Relevant documentation is updated (if needed)"
