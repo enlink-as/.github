@@ -1,0 +1,56 @@
+name: "Subtask"
+description: "Define a sub-task for implementing a feature, optimization, or bug fix."
+title: "Title"
+labels: ["subtask"]
+type: "Subtask"
+projects: ["enlink-as/28"]
+assignees: []
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "📌 Description"
+      description: "Briefly describe the task and its role in the overall feature development."
+      placeholder: "Explain the purpose of this task..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: "🎯 Expected Outcome"
+      description: "Define the deliverables and how they contribute to the feature."
+      placeholder: "The result of this task should be..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "🔗 Dependencies"
+      description: "Mention any dependencies on other tasks or services."
+      placeholder: "Depends on Task #123 or Service X..."
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "📝 Additional Context"
+      description: "Add any relevant notes, links, or considerations."
+      placeholder: "Include links, references, or anything else relevant..."
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: "✅ Definition of Done"
+      description: "The task is considered complete when the following criteria are met."
+      options:
+        - label: "Code is written and committed"
+        - label: "Code is reviewed and approved"
+        - label: "Unit tests and integration tests (if applicable) are written and passing"
+        - label: "The feature is manually tested in a development environment"
+        - label: "No critical bugs or issues remain"
+        - label: "Relevant documentation is updated (if needed)"
+        - label: "Implementation meets the expected outcome and increases product value"
+        - label: "Does it *really* work?"
+        
